@@ -1,16 +1,9 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         
-        low = 0
-        high = len(nums)-1
-
-        while low<=high:
-            if(nums[low]==val):
-                temp = nums[low]
-                nums[low] = nums[high]
-                nums[high] = temp
-                high-=1
-            else:
-                low+=1
-        
-        return low
+        index = 0
+        for i in range(len(nums)):
+            if(nums[i] != val):
+                nums[index]=nums[i]
+                index+=1
+        return index
