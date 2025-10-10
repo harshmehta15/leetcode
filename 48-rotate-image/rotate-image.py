@@ -12,12 +12,6 @@ class Solution:
 
         for i in range(0,n):
             matrix[i].reverse()
-            
-
-    def swapMatrix(self,i,j,x,y,matrix):
-        temp = matrix[i][j]
-        matrix[i][j] = matrix[x][y]
-        matrix[x][y] = temp
     
     def swapInternal(self,i,j,matrix):
 
