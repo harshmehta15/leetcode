@@ -13,11 +13,12 @@ class Solution:
         if(n%2!=0):
             left = math.floor(n/2)
         else:
-            left = (n//2)
+            left = (n//2)-1
 
         for i in range(0,n):
-            for j in range(0,left):
+            for j in range(0,left+1):
                 self.swapMatrix(i,j,i,n-j-1,matrix)
+
 
     def swapMatrix(self,i,j,x,y,matrix):
         temp = matrix[i][j]
